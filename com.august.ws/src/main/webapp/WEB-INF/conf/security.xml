@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<!-- <security:http use-expressions="true">
+		<security:intercept-url pattern="/stylesheets/**"
+			access="permitAll" />
+		<security:intercept-url pattern="/js/**"
+			access="permitAll" />
+		<security:intercept-url pattern="/" access="permitAll" />
+		<security:intercept-url pattern="/user/register"
+			access="permitAll" />
+		<security:intercept-url pattern="/user/signin"
+			access="permitAll" />
+		<security:intercept-url pattern="/transaction/**"
+			access="hasRole('ROLE_CUSTOMER')" />
+		<security:intercept-url pattern="/**" access="denyAll" />
+		<security:form-login login-page="/home"
+			login-processing-url="/user/signin-check" authentication-failure-url="/user/signin?login_error=1" />
+		<security:logout />
+	</security:http>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider
+			user-service-ref="userDetailsService">
+			<security:password-encoder ref="passwordEncoder">
+				<security:salt-source ref="saltSource" />
+			</security:password-encoder>
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<bean id="authenticationFilter"
+		class="com.snowflake.web.filter.SfUsernamePasswordAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="filterProcessesUrl" value="/user/signin" />
+	</bean> -->
+
+</beans>
